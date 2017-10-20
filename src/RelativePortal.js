@@ -66,6 +66,8 @@ export default class RelativePortal extends React.Component {
         const right = window.innerWidth - rect.right + pageOffset.x;
         const left = pageOffset.x + rect.left;
 
+        console.log(rect)
+
         if (top !== this.state.top || left !== this.state.left || right !== this.state.right) {
           this.setState({ left, top, right });
         }
