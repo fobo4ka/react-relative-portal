@@ -6,6 +6,7 @@ export default class Portal extends React.Component {
 
   static propTypes = {
     onOutClick: PropTypes.func,
+    onAfterOpen: PropTypes.func
   };
 
   constructor(props, context) {
@@ -60,6 +61,10 @@ export default class Portal extends React.Component {
       <div {...props} ref={this.handleRootRef} />,
       this.node
     );
+  }
+
+  componentDidMount() {
+    this.props.onAfterOpen()
   }
 
   componentWillUnmount() {

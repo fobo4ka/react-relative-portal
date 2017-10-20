@@ -70,7 +70,7 @@ export default class RelativePortal extends React.Component {
           this.setState({ left, top, right });
         }
 
-        this.props.onAfterOpen();
+        // this.props.onAfterOpen();
       }
     };
     this.unsubscribe = subscribe(this.handleScroll);
